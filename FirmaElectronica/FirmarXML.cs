@@ -14,6 +14,7 @@ using org.w3c.dom;
 using es.mityc.firmaJava.libreria.utilidades;
 using javax.xml.parsers;
 using java.util;
+using java.util.logging;
 
 namespace FirmaElectronica
 {
@@ -50,7 +51,7 @@ namespace FirmaElectronica
                     DataToSign dataToSign = new DataToSign();
                     dataToSign.setXadesFormat(EnumFormatoFirma.XAdES_BES);
                     dataToSign.setEsquema(XAdESSchemas.XAdES_132);
-                    dataToSign.setPolicyKey("facturae31");
+                    //dataToSign.setPolicyKey("facturae31");
                     dataToSign.setXMLEncoding("UTF-8");
                     dataToSign.setEnveloped(true);
                     dataToSign.addObject(new ObjectToSign(new InternObjectToSign("comprobante"), "contenido comprobante", null, "text/xml", null));
